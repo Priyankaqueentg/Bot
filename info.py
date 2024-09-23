@@ -13,9 +13,10 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '26395468'))
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_HASH = environ.get('API_HASH', '680786593eb3e6b3195153f1ae9dd17e')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6232508540:AAH_Q5iJRpUt1vYGTIhVZUihgaxlMz63dNs")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -36,16 +37,16 @@ STREAMHTO = (environ.get('STREAMHTO', ''))
 BOT_USERNAME = environ.get("BOT_USERNAME", "showtime_file_bot")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6454955024 6676821961').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002156133774 -1001854800053').split()] #Channel id for auto indexing ( make sure bot is admin )
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6454955024 1740849725 6676821961').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()] #Channel id for auto indexing ( make sure bot is admin )
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6454955024 6676821961').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '-1001959106684') #Channel / Group Id for force sub ( make sure bot is admin )
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub ( make sure bot is admin )
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1004568991463') # support group id ( make sure bot is admin )
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '') # support group id ( make sure bot is admin )
 reqst_channel = environ.get('REQST_CHANNEL_ID', '') # request channel id ( make sure bot is admin )
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
@@ -76,7 +77,7 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/showtimelatest')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 MSG_ALRT = environ.get('MSG_ALRT', 'ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ: EVIL😇')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002145511947')) #Log channel id ( make sure bot is admin )
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002039121535')) #Log channel id ( make sure bot is admin )
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/evil00000') #Support group link ( make sure bot is admin )
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
@@ -142,7 +143,7 @@ JS_WEB_PREMIUM = is_enabled((environ.get('JS_WEB_PREMIUM', "True")), True)
 JS_THEMES = "cerulean"
 
 # add premium logs channel id
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1001915988112'))
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002039121535'))
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
