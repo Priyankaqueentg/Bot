@@ -33,7 +33,7 @@ REFER_PICS = (environ.get("REFER_PICS", "https://graph.org/file/1a2e64aee3d4d10e
 STREAM_SITE = (environ.get('STREAM_SITE', '')) # not support
 STREAM_API = (environ.get('STREAM_API', ''))
 STREAMHTO = (environ.get('STREAMHTO', ''))
-BOT_USERNAME = environ.get("BOT_USERNAME", "showtime_file_bot")
+BOT_USERNAME = environ.get("BOT_USERNAME", "Anna_movies_bot")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6454955024 1740849725 6676821961').split()]
